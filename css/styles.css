@@ -328,7 +328,6 @@ display: flex;
   padding: 100px 0;
   background-color: var(--title-background-color);
   color: var(--light-accent-color);
-  outline: solid 1px tomato;
 }
 
 .footer .logo {
