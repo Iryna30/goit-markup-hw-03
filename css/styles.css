@@ -13,7 +13,7 @@
   --light-accent-color: #f4f4fd;
   --accent-color: #e7e9fc;
   --card-row-gap: 24px;
-  --card-column-gap: 48px;
+  
 }
 
 *,
@@ -149,14 +149,9 @@ header {
 
 
 
-.site-link:hover,
-.site-link.current {
-  border-bottom: var(--pressed-state-color) solid 2px;
-  border-radius: 2px;
-}
-
 .link:hover,
-.link:focus {
+.link:focus,
+.link.current {
   color: var(--pressed-state-color);
 }
 
@@ -290,13 +285,17 @@ display: flex;
 }
 
 .team-list {
-  margin-right: calc(-1 * var(--card-row-gap));
   display: flex;
   
 }
 
+
 .team-list-item{
   flex-basis: calc((100% - 3*var(--card-row-gap)) / 4);
+ 
+}
+
+.team-list-item:not(:last-child){
   margin-right: var(--card-row-gap);
 }
 
@@ -337,8 +336,11 @@ display: flex;
 }
 
 .text-footer {
-  max-width: 264px;
   color: var(--accent-color);
+}
+
+.logo-text-container{
+  width: 264px;
 }
 
 /* --------Portfolio Page ---------*/
@@ -383,17 +385,15 @@ border-radius: 4px;
 .exampl-list{
 display: flex;
 flex-wrap: wrap;
-margin-left: calc(-1 * var(--card-row-gap));
-margin-top: calc(-1 * var(--card-column-gap));
-
+gap: calc(2* var(--card-row-gap)) var(--card-row-gap);
 
 
 }
 
 .exampl-item{
 flex-basis: calc((100%- 2 * var(--card-row-gap)) / 3);
-margin-left: var(--card-row-gap);
-margin-top: var(--card-column-gap);
+
+
 }
 
 .exampl-list-container{
